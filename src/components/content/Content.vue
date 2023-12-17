@@ -26,13 +26,33 @@
             <span class="label">
               <span class="text">New Register</span>
               <span class="text">Payout register to select employees</span>
-              <span class="btn-container">
+
+            </span>
+          <span class="btn-container">
+                    <button class="btn btn-import">
+                      <i class="bi bi-arrow-down-circle"></i>
+                        Import
+                    </button>
+
+            <button class="btn btn-manual">
+              <i class="bi bi-person-add"></i>
+              Manual
+            </button>
 
               </span>
-            </span>
 
             </span>
         <span class="element schedules">
+            <span class="label">
+              <span class="text">Schedules</span>
+              <span class="text">2 active payout schedules</span>
+            </span>
+          <span class="btn-container">
+                    <button class="btn btn-import">
+                      <i class="bi bi-toggles"></i>
+                        Setup
+                    </button>
+          </span>
 
             </span>
 
@@ -65,6 +85,7 @@
     border-radius: 20px;
     border: solid 1px rgb(223, 225, 227);
 
+
     header {
       width: 100%;
       height: 25%;
@@ -75,6 +96,8 @@
       justify-content: space-between;
       align-items: center;
 
+
+
       .register {
         width: 35%;
         height: 80%;
@@ -83,21 +106,22 @@
         flex-direction: column;
         align-items: center;
 
-        .label{
+        .label {
           width: 80%;
           height: 20%;
           display: flex;
-          gap:10px ;
+          gap: 10px;
           justify-content: flex-start;
           align-items: center;
           font-size: 15px;
           color: $color-secondary;
-          .pending{
+
+          .pending {
             color: $color-tertiary;
           }
         }
 
-        .count{
+        .count {
           width: 80%;
           height: 40%;
           display: flex;
@@ -108,14 +132,15 @@
 
         }
 
-        .btn-container{
+        .btn-container {
           width: 80%;
           height: 40%;
           display: flex;
           justify-content: flex-start;
           align-items: center;
           gap: 10px;
-          .btn{
+
+          .btn {
             border-radius: 15px;
 
             border: none;
@@ -124,17 +149,28 @@
             font-weight: bold;
             cursor: pointer;
           }
-          .send{
+          .btn:hover{
+            background-color: $color-secondary;
+            color: white;
+          }
+
+          .send {
             width: 250px;
             background-color: $color-tertiary;
             color: $color-primary;
-            i{
+
+            i {
               font-size: 20px;
 
             }
           }
+          .send:hover{
+            background-color: white;
+            border: solid 1px $color-tertiary;
+            color: $color-tertiary;
+          }
 
-          .option{
+          .option {
             width: 50px;
             background-color: white;
             color: $color-secondary;
@@ -145,32 +181,117 @@
 
       }
 
+
       .new-register {
         width: 40%;
         height: 100%;
         border-right: solid 1px rgb(223, 225, 227);
         border-left: solid 1px rgb(223, 225, 227);
         display: flex;
+        justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        .label{
+
+        .label {
           width: 80%;
-          height: 20%;
+          height: 40%;
           display: flex;
-          gap:10px ;
-          align-items: center;
+          flex-direction: column;
+          justify-content: space-evenly;
+          gap: 10px;
+          align-items: flex-start;
           font-size: 15px;
           text-align: start;
           color: $color-secondary;
-          .pending{
-            color: $color-tertiary;
+        }
+
+        .btn-container{
+          width: 80%;
+          height: 40%;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+
+        }
+        .btn{
+          width: 200px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          font-size: 15px;
+          font-weight: bold;
+          border-radius: 15px;
+          border: solid 1px $color-secondary;
+          background-color: white;
+          color: $color-secondary;
+          font-size: 15px;
+          cursor: pointer;
+          i{
+            font-size: 20px;
           }
         }
+        .btn:hover{
+          background-color: $color-secondary;
+          color: white;
+        }
       }
+
 
       .schedules {
         width: 25%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+        .label {
+          width: 80%;
+          height: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          gap: 10px;
+          align-items: flex-start;
+          font-size: 15px;
+          text-align: start;
+          color: $color-secondary;
+        }
+        .btn-container{
+          width: 80%;
+          height: 40%;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+
+        }
+
+        .btn{
+          width: 200px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          font-size: 15px;
+          font-weight: bold;
+          border-radius: 15px;
+          border: solid 1px $color-secondary;
+          background-color: white;
+          color: $color-secondary;
+          font-size: 15px;
+          cursor: pointer;
+          i{
+            font-size: 20px;
+          }
+        }
+        .btn:hover{
+          background-color: $color-secondary;
+          color: white;
+        }
 
       }
 
